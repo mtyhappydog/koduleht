@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — MTÜ Happy Dog</title>
+<meta name="description" content="MTÜ Happy Dog contact details, bank details and location map.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito+Sans:ital,wght@0,400;0,600;0,800;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="icon" type="image/png" href="../images/hd_logo.png">
+</head>
+<body>
+<a id="top"></a><header>
+  <nav class="nav" aria-label="Main menu">
+    <a class="logo" href="index.html"><img src="../images/hd_logo.png" alt="MTÜ Happy Dog logo">MTÜ Happy Dog</a>
+    <div class="nav-right">
+      <ul><li><a href="index.html">Home</a></li><li><a href="naitused.html">Shows</a></li><li><a href="koolitused.html">Courses</a></li><li><a href="yritused.html">Events</a></li><li><a href="meist.html">About us</a></li><li><a href="galerii.html">Gallery</a></li><li><a href="meedia.html">Media</a></li><li><a href="kontakt.html" class="active" aria-current="page">Contact</a></li></ul>
+      <div class="lang-switch" aria-label="Keel / Language"><a href="../kontakt.html" class="lang-b">ET</a><span class="lang-b active-lang">EN</span></div>
+    </div>
+  </nav>
+</header>
+<main>
+<div class="page-hero"><div class="wrap">
+  <span class="eyebrow">Contact</span>
+  <h1>Get in touch with us!</h1>
+</div></div>
+<section style="padding-top:10px"><div class="wrap">
+  <div class="contact-grid">
+    <div class="contact-info">
+      <h2 style="margin-bottom:14px">MTÜ Happy Dog</h2>
+      <p><strong>Legal address:</strong><br>Pilve 16<br>61406 Märja<br>Eesti / Estonia</p>
+      <p><strong>Phone:</strong> <a href="tel:+37255659115">+372 5565 9115</a></p>
+      <p><strong>E-mail:</strong> <a href="mailto:karlis@happydog.ee">karlis@happydog.ee</a></p>
+      <p><strong>Questions about show registrations:</strong> <a href="mailto:show@happydog.ee">show@happydog.ee</a></p>
+      <p><strong>Bank details:</strong><br>mittetulundusühing Happy Dog<br>AS LHV Pank · EE337700771003226275</p>
+      <p><strong>Facebook:</strong> <a href="https://www.facebook.com/mtyhappydog">facebook.com/mtyhappydog</a><br><strong>Instagram:</strong> <a href="https://www.instagram.com/mtyhappydog/">instagram.com/mtyhappydog</a></p>
+      <div class="notice"><strong>NB! We are open by appointment only!</strong><br>To reach us, please use the route shown on the map.</div>
+      <figure class="photo-frame" style="margin-top:20px"><img src="../images/kontakt.jpg" alt="Map with the recommended route: turn from Võlsi road onto Pilve street, destination Pilve 16" loading="lazy"><figcaption>Recommended route — Pilve 16, Märja</figcaption></figure>
+    </div>
+    <form class="form" id="contactForm">
+      <h2>Write to us</h2>
+      <div>
+        <label for="nimi">Your name</label>
+        <input type="text" id="nimi" name="nimi" required autocomplete="name">
+      </div>
+      <div>
+        <label for="epost">E-mail</label>
+        <input type="email" id="epost" name="epost" required autocomplete="email">
+      </div>
+      <div>
+        <label for="sonum">Message</label>
+        <textarea id="sonum" name="sonum" required placeholder="E.g. a question about show registration…"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Send message</button>
+      <p class="form-note">The form opens your e-mail app and sends the message to karlis@happydog.ee.</p>
+    </form>
+  </div>
+</div></section>
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e){
+  e.preventDefault();
+  var nimi=document.getElementById("nimi").value, epost=document.getElementById("epost").value, sonum=document.getElementById("sonum").value;
+  var body="Nimi / Name: "+nimi+"%0AE-post / E-mail: "+epost+"%0A%0A"+encodeURIComponent(sonum);
+  window.location.href="mailto:karlis@happydog.ee?subject="+encodeURIComponent("Message from the website")+"&body="+body;
+});
+</script>
+
+</main>
+<footer>
+  <div class="wrap">
+    <p><strong>Mittetulundusühing Happy Dog</strong> · reg-kood 80328861 · KMKR EE102715235</p>
+    <p>Pilve tn 16, Märja alevik, Tartumaa 61406, Eesti</p>
+    <p><a href="mailto:karlis@happydog.ee">karlis@happydog.ee</a> · +372 5565 9115 · <a href="https://www.facebook.com/mtyhappydog">Facebook</a> · <a href="https://www.instagram.com/mtyhappydog/">Instagram</a></p>
+    <p>© 2026 MTÜ Happy Dog · <a href="#top">Back to top ↑</a></p>
+  </div>
+</footer>
+</body>
+</html>
