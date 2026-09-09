@@ -1,4 +1,5 @@
 :root{
+  color-scheme:light only;
   --butter:#FFF3D6;
   --cocoa:#35261B;
   --orange:#F0821E;
@@ -160,4 +161,56 @@ footer p{margin:3px 0}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   .btn{transition:none}
+}
+
+/* ---------- Valga subsection ---------- */
+.subnav{display:flex;gap:6px;flex-wrap:wrap;margin:18px 0 8px}
+.subnav a{font-family:"Baloo 2",sans-serif;font-weight:700;font-size:.9rem;text-decoration:none;color:var(--cocoa);background:var(--card);border:2px solid var(--cocoa);border-radius:999px;padding:6px 16px}
+.subnav a:hover{background:var(--orange);color:var(--cocoa)}
+.subnav a.sub-active{background:var(--cocoa);color:var(--butter)}
+.fee-block h3{font-size:1.05rem;margin:14px 0 4px;color:var(--poppy)}
+.fee-block ul{list-style:none;margin:0 0 6px}
+.fee-block li{display:flex;justify-content:space-between;gap:14px;border-bottom:2px dotted rgba(53,38,27,.25);padding:5px 0}
+.fee-block li strong{white-space:nowrap}
+.acc-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.acc{background:var(--card);border:var(--border);border-radius:14px;padding:16px 18px;font-size:.95rem}
+.acc h3{font-size:1.05rem;margin-bottom:4px}
+.warn{background:#FBE3D2;border:2px solid var(--poppy);border-radius:14px;padding:12px 16px;font-weight:700;margin:16px 0}
+@media (max-width:700px){.acc-grid{grid-template-columns:1fr}}
+
+/* ---------- Judge tables & gallery ---------- */
+.table-wrap{overflow-x:auto;border:var(--border);border-radius:16px;box-shadow:var(--shadow);background:var(--card)}
+.jtable{width:100%;border-collapse:collapse;font-size:.95rem;min-width:560px}
+.jtable th{background:var(--orange);color:var(--cocoa);font-family:"Baloo 2",sans-serif;font-size:1rem;padding:10px 16px;text-align:left;border-bottom:2.5px solid var(--cocoa)}
+.jtable td{padding:9px 16px;border-bottom:1px solid rgba(53,38,27,.15);vertical-align:top}
+.jtable tbody tr:nth-child(even){background:#FFF0D2}
+.jtable tbody tr:last-child td{border-bottom:none}
+.jtable td:first-child{font-weight:800;white-space:nowrap}
+.judge-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin:10px 0 30px}
+.judge-grid .photo-frame img{aspect-ratio:1/1;object-fit:cover}
+.judge-grid .photo-frame figcaption{font-size:.78rem;padding:6px 10px}
+.judge-grid .photo-frame:nth-child(odd){transform:rotate(-.7deg)}
+.judge-grid .photo-frame:nth-child(even){transform:rotate(.6deg)}
+@media (max-width:900px){.judge-grid{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:600px){.judge-grid{grid-template-columns:repeat(2,1fr)}}
+
+/* Featured upcoming-shows box */
+.card-featured{background:#CDEAC0;border-width:3.5px;box-shadow:8px 8px 0 var(--cocoa);padding:30px 30px;font-size:1.12rem}
+.card-featured .badge.naitus{background:var(--teal);color:var(--butter)}
+.card-featured a{color:var(--cocoa)}
+.card-featured .paw-list li{margin-bottom:0}
+
+/* ---------- Nav dropdown (Näitused → Valga 2027), click-toggle ---------- */
+.nav ul li.has-sub{position:relative}
+.nav ul li.has-sub > a::after{content:" ▾";font-size:.7em;opacity:.7}
+.submenu{display:none;position:absolute;top:100%;left:0;z-index:60;margin:0;padding:6px;list-style:none;flex-direction:column;min-width:190px;background:var(--card);border:var(--border);border-radius:14px;box-shadow:var(--shadow)}
+.submenu li{width:100%}
+.submenu a{display:block;white-space:nowrap;border-radius:10px}
+.submenu a::after{content:none !important}
+.nav ul li.has-sub.open > .submenu{display:flex}
+@media (max-width:820px){
+  .nav ul li.has-sub{width:100%;text-align:center}
+  .submenu{position:static;margin:6px auto 0;box-shadow:none;border-width:2px;min-width:0;max-width:240px}
+  .submenu a{text-align:center}
+  .nav ul li.has-sub.open > .submenu{display:flex}
 }
