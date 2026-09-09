@@ -18,7 +18,7 @@
   <nav class="nav" aria-label="Peamenüü">
     <a class="logo" href="index.html"><img src="images/hd_logo.png" alt="MTÜ Happy Dog logo">MTÜ Happy Dog</a>
     <div class="nav-right">
-      <ul><li><a href="index.html">Avaleht</a></li><li><a href="naitused.html">Näitused</a></li><li><a href="koolitused.html">Koolitused</a></li><li><a href="yritused.html">Üritused</a></li><li><a href="meist.html">Meist</a></li><li><a href="galerii.html">Galerii</a></li><li><a href="meedia.html">Meedia</a></li><li><a href="kontakt.html">Kontakt</a></li></ul>
+      <ul><li><a href="index.html">Avaleht</a></li><li class="has-sub"><a href="naitused.html">Näitused</a><ul class="submenu"><li><a href="valga2027.html">Valga 2027</a></li></ul></li><li><a href="koolitused.html">Koolitused</a></li><li><a href="yritused.html">Üritused</a></li><li><a href="meist.html">Meist</a></li><li><a href="galerii.html">Galerii</a></li><li><a href="meedia.html">Meedia</a></li><li><a href="kontakt.html">Kontakt</a></li></ul>
       <div class="lang-switch" aria-label="Keel / Language"><a href="en/valga2027-registreerimine.html" class="lang-b">EN</a><span class="lang-b active-lang">ET</span></div>
     </div>
   </nav>
@@ -26,7 +26,7 @@
 <main>
 <div class="page-hero"><div class="wrap">
   <span class="eyebrow">Näitused</span>
-  <h1>Valga rahvuslikud näitused 20.–21.02.2027</h1>
+  <h1>Valga rahvuslikud näitused<br>20.–21.02.2027</h1>
   <div class="subnav"><a href="valga2027.html">Info</a><a href="valga2027-registreerimine.html" class="sub-active">Registreerimine ja tasud</a><a href="valga2027-kohtunikud.html">Kohtunikud</a><a href="valga2027-ajakava.html">Ajakava ja programm</a><a href="valga2027-majutus.html">Majutus</a></div>
   <p style="font-weight:700;margin-top:6px">Registreerimistasud</p>
 </div></div>
@@ -46,12 +46,11 @@
   <div class="card tilt-r">
     <h2>Registreerimine toimub järgmiselt</h2>
     <p><strong>NB! Eesti Kennelliidu liikmetel on võimalus registreerida <a href="http://online.kennelliit.ee/">ONLINE-s</a>!</strong><br><strong><em>Tasuda saab pangalingi maksega — kiire ja mugav ning ilma lisatasuta!</em></strong><br><br>või</p>
-    <p style="margin-top:12px"><strong>1)</strong> Palume täita registreerimislehe(d):<br><a href="http://www.valgadogshow.com/uploads/1/3/9/7/13978346/n%C3%A4itusele-registreerimise-leht-16-6-2016.pdf">* Koera registreerimisleht</a><br><a href="http://happydognaitus.weebly.com/uploads/1/3/9/7/13978346/regleht_paarid.doc">* Paaride võistlus</a></p>
+    <p style="margin-top:12px"><strong>1)</strong> Palume täita registreerimislehe(d):<br><a href="files/naitusele-registreerimise-leht-est.pdf">* Koera registreerimisleht</a><br><a href="files/paaride-registreerimise-leht-est.pdf">* Paaride võistlus</a></p>
     <p style="margin-top:12px"><strong>2)</strong> Tasuge osalemise tasu <strong>Mittetulundusühing Happy Dog</strong> arveldusarvele <strong>LHV Pangas</strong>: a/a <strong>EE337700771003226275</strong>. Maksekorralduse <u>selgitusse</u> palume märkida koera <strong>registri numbri, tõu ning omaniku nime</strong>.</p>
     <div style="margin-top:12px"><strong>3)</strong> Saatke järgmistest dokumentidest koopia:<ul class="paw-list" style="margin-top:8px"><li>tõutunnistus (juhul kui koer EI OLE Eesti või Soome registris)</li><li>maksekviitung</li><li>tšempionitiitli kinnitus(ed) — tšempioniklassi registreerimisel</li></ul>Dokumendid saata e-mailile: <a href="mailto:show@happydog.ee">show@happydog.ee</a>. <u>NB! Tavapostiga registreerimist ei toimu!</u></div>
     <p style="margin-top:12px">Pärast kõikide dokumentide laekumist saadetakse Teile KINNITUS registreerimise kohta. Kui Teile ei ole saadetud 5 tööpäeva jooksul kinnitust, palume võtta koheselt ühendust.</p>
   </div>
-  <div class="warn">REGISTREERIMISED, MILLE EEST EI OLE TASUTUD JA/VÕI DOKUMENDID EI OLE JÕUDNUD ORGANISEERIJATENI ÕIGEAEGSELT — KUSTUTATAKSE!</div>
   <p style="margin:14px 0"><em>NB! Näitusele registreerides annad loa, et avaldame internetis kataloogifaili koos koera omaniku nime ja elukohariigiga. Samuti näitusel tehtavaid fotosid võidakse kasutada hilisemalt turunduslikel eesmärkidel.</em></p>
   <div class="card tilt-l">
     <h2>Nõuded osalejatele</h2>
@@ -71,5 +70,21 @@
     <p>© 2026 MTÜ Happy Dog · <a href="#top">Tagasi üles ↑</a></p>
   </div>
 </footer>
+<script>
+(function(){
+  var sub = document.querySelector('.nav li.has-sub');
+  if(!sub) return;
+  var link = sub.querySelector('a');
+  link.addEventListener('click', function(e){
+    if(!sub.classList.contains('open')){
+      e.preventDefault();
+      sub.classList.add('open');
+    }
+  });
+  document.addEventListener('click', function(e){
+    if(!sub.contains(e.target)) sub.classList.remove('open');
+  });
+})();
+</script>
 </body>
 </html>

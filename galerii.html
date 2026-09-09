@@ -18,7 +18,7 @@
   <nav class="nav" aria-label="Peamenüü">
     <a class="logo" href="index.html"><img src="images/hd_logo.png" alt="MTÜ Happy Dog logo">MTÜ Happy Dog</a>
     <div class="nav-right">
-      <ul><li><a href="index.html">Avaleht</a></li><li><a href="naitused.html">Näitused</a></li><li><a href="koolitused.html">Koolitused</a></li><li><a href="yritused.html">Üritused</a></li><li><a href="meist.html">Meist</a></li><li><a href="galerii.html" class="active" aria-current="page">Galerii</a></li><li><a href="meedia.html">Meedia</a></li><li><a href="kontakt.html">Kontakt</a></li></ul>
+      <ul><li><a href="index.html">Avaleht</a></li><li class="has-sub"><a href="naitused.html">Näitused</a><ul class="submenu"><li><a href="valga2027.html">Valga 2027</a></li></ul></li><li><a href="koolitused.html">Koolitused</a></li><li><a href="yritused.html">Üritused</a></li><li><a href="meist.html">Meist</a></li><li><a href="galerii.html" class="active" aria-current="page">Galerii</a></li><li><a href="meedia.html">Meedia</a></li><li><a href="kontakt.html">Kontakt</a></li></ul>
       <div class="lang-switch" aria-label="Keel / Language"><a href="en/galerii.html" class="lang-b">EN</a><span class="lang-b active-lang">ET</span></div>
     </div>
   </nav>
@@ -72,5 +72,21 @@
     <p>© 2026 MTÜ Happy Dog · <a href="#top">Tagasi üles ↑</a></p>
   </div>
 </footer>
+<script>
+(function(){
+  var sub = document.querySelector('.nav li.has-sub');
+  if(!sub) return;
+  var link = sub.querySelector('a');
+  link.addEventListener('click', function(e){
+    if(!sub.classList.contains('open')){
+      e.preventDefault();
+      sub.classList.add('open');
+    }
+  });
+  document.addEventListener('click', function(e){
+    if(!sub.contains(e.target)) sub.classList.remove('open');
+  });
+})();
+</script>
 </body>
 </html>
