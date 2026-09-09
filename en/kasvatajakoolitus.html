@@ -12,6 +12,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito+Sans:ital,wght@0,400;0,600;0,800;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/style.css?v=4">
 <link rel="icon" type="image/png" href="../images/hd_logo.png">
+<style id="dropdown-fix">
+.nav ul li.has-sub{position:relative}
+.nav ul li.has-sub>a::after{content:" \25BE";font-size:.7em;opacity:.7}
+.nav ul li.has-sub>.submenu{display:none}
+.nav ul li.has-sub:hover>.submenu,
+.nav ul li.has-sub:focus-within>.submenu,
+.nav ul li.has-sub.open>.submenu{display:flex}
+@media (max-width:820px){.nav ul li.has-sub>a::after{content:none}}
+</style>
 </head>
 <body>
 <a id="top"></a><header>
