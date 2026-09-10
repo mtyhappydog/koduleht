@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito+Sans:ital,wght@0,400;0,600;0,800;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../css/style.css?v=4">
+<link rel="stylesheet" href="../css/style.css?v=5">
 <link rel="icon" type="image/png" href="../images/hd_logo.png">
 <style id="dropdown-fix">
 .nav ul li.has-sub{position:relative}
@@ -27,7 +27,7 @@
   <nav class="nav" aria-label="Main menu">
     <a class="logo" href="index.html"><img src="../images/hd_logo.png" alt="MTÜ Happy Dog logo">MTÜ Happy Dog</a>
     <div class="nav-right">
-      <ul><li><a href="index.html">Home</a></li><li class="has-sub"><a href="naitused.html">Shows</a><ul class="submenu"><li><a href="valga2027.html">Valga 2027</a></li></ul></li><li><a href="koolitused.html">Courses</a></li><li><a href="yritused.html">Events</a></li><li><a href="meist.html">About us</a></li><li><a href="galerii.html">Gallery</a></li><li><a href="meedia.html">Media</a></li><li><a href="kontakt.html">Contact</a></li></ul>
+      <ul><li><a href="index.html">Home</a></li><li class="has-sub"><a href="naitused.html">Shows</a><ul class="submenu"><li><a href="valga2027.html">Valga 2027</a></li></ul></li><li><a href="yritused.html">Events</a></li><li><a href="meist.html">About us</a></li><li><a href="galerii.html">Gallery</a></li><li><a href="meedia.html">Media</a></li><li><a href="kontakt.html">Contact</a></li></ul>
       <div class="lang-switch" aria-label="Keel / Language"><a href="../valga2027-majutus.html" class="lang-b">ET</a><span class="lang-b active-lang">EN</span></div>
     </div>
   </nav>
@@ -56,21 +56,5 @@
     <p>© 2026 MTÜ Happy Dog · <a href="#top">Back to top ↑</a></p>
   </div>
 </footer>
-<script>
-(function(){
-  var sub = document.querySelector('.nav li.has-sub');
-  if(!sub) return;
-  var link = sub.querySelector('a');
-  link.addEventListener('click', function(e){
-    if(!sub.classList.contains('open')){
-      e.preventDefault();
-      sub.classList.add('open');
-    }
-  });
-  document.addEventListener('click', function(e){
-    if(!sub.contains(e.target)) sub.classList.remove('open');
-  });
-})();
-</script>
 </body>
 </html>
