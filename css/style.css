@@ -186,7 +186,7 @@ footer p{margin:3px 0}
 .jtable tbody tr:nth-child(even){background:#FFF0D2}
 .jtable tbody tr:last-child td{border-bottom:none}
 .jtable td:first-child{font-weight:800;white-space:nowrap}
-.judge-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin:10px 0 30px}
+.judge-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:10px 0 30px}
 .judge-grid .photo-frame img{aspect-ratio:1/1;object-fit:cover}
 .judge-grid .photo-frame figcaption{font-size:.78rem;padding:6px 10px}
 .judge-grid .photo-frame:nth-child(odd){transform:rotate(-.7deg)}
